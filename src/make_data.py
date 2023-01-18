@@ -14,7 +14,7 @@ try:
     df = pd.read_csv( base_db , sep=';')
     table_name = 'tb_base'
     string_conetion = 'sqlite:///{path}'
-    string_conetion = string_conetion.format( path=os.path.join(data, 'base.db') )
+    string_conetion = string_conetion.format( path=os.path.join(data, 'dataset.db') )
     conection = sqlalchemy.create_engine( string_conetion )
     df.to_sql( name=table_name, con=conection, if_exists='replace' )
     
